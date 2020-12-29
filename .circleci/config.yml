@@ -8,7 +8,7 @@ jobs:
       - restore_cache:
           keys:
             - dependency-cache-{{ checksum "package.json" }}
-            - dependecy-cache-
+            - dependency-cache-
       - run:
           name: "Install Dependencies"
           command: . build/install_dependencies.sh
@@ -32,7 +32,7 @@ jobs:
       - restore_cache:
           keys:
             - dependency-cache-{{ checksum "package.json" }}
-            - dependecy-cache-
+            - dependency-cache-
       - run:
           name: "Install Dependencies"
           command: . build/install_dependencies.sh
@@ -53,7 +53,7 @@ jobs:
       - restore_cache:
           keys:
             - dependency-cache-{{ checksum "package.json" }}
-            - dependecy-cache-
+            - dependency-cache-
       - run:
           name: "Install Dependencies"
           command: . build/install_dependencies.sh

@@ -10,17 +10,17 @@ jobs:
             - dependency-cache-{{ checksum "package.json" }}
             - dependency-cache-
       - run:
-          name: "Install Dependencies"
+          name: Install Dependencies
           command: . build/install_dependencies.sh
       - save_cache:
           key: dependency-cache-{{ checksum "package.json" }}
           paths:
             - node_modules
       - run:
-          name: "Login to org"
+          name: Login to org
           run: . build/login_to_org.sh    
       - run:
-          name: "Run Apex Tests"
+          name: Run Apex Tests
           run: . build/run_apex_tests.sh
       - store_test_results:
           path: test-results
@@ -34,14 +34,14 @@ jobs:
             - dependency-cache-{{ checksum "package.json" }}
             - dependency-cache-
       - run:
-          name: "Install Dependencies"
+          name: Install Dependencies
           command: . build/install_dependencies.sh
       - save_cache:
           key: dependency-cache-{{ checksum "package.json" }}
           paths:
             - node_modules
       - run:
-          name: "SFDX Scanner Analysis"
+          name: SFDX Scanner Analysis
           command: . build/run_sfdx_scanner.sh
       - store_artifacts:
           path: sfdxScannerAnalysis.csv
@@ -55,7 +55,7 @@ jobs:
             - dependency-cache-{{ checksum "package.json" }}
             - dependency-cache-
       - run:
-          name: "Install Dependencies"
+          name: Install Dependencies
           command: . build/install_dependencies.sh
       - save_cache:
           key: dependency-cache-{{ checksum "package.json" }}

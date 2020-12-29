@@ -1,10 +1,10 @@
 echo "Setting up DevHub Connection..."
-mkdir keys
-echo $CERT_KEY | base64 -di > keys/server.key
+mkdir appKeys
+echo $CERT_KEY | base64 -di > appKeys/server.key
 
 # Authenticate to salesforce
 echo "Authenticating..."
-sfdx force:auth:jwt:grant --clientid $APP_KEY --jwtkeyfile keys/server.key --username $SF_USERNAME --setdefaultdevhubusername -a DevHub
+sfdx force:auth:jwt:grant --clientid $APP_KEY --jwtkeyfile appKeys/server.key --username $SF_USERNAME --setdefaultdevhubusername -a DevHub
 
 #Create a scratch org
 echo "Creating the Scratch Org..."

@@ -55,7 +55,7 @@ jobs:
             - dependency-cache-{{ checksum "package.json" }}
             - dependency-cache-
       - run:
-          name: Install Dependencies
+          name: "Install Dependencies"
           command: . build/install_dependencies.sh
       - save_cache:
           key: dependency-cache-{{ checksum "package.json" }}

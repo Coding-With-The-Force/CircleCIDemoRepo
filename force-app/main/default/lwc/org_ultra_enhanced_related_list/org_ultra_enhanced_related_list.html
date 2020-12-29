@@ -1,0 +1,45 @@
+<template>
+    <lightning-layout class="slds-align-bottom" multiple-rows="false">
+        <lightning-layout-item class="slds-align-bottom slds-p-around_xx-small" flexibility="auto">
+            <lightning-input type="search" label="Search Table" onchange={searchDataTable}></lightning-input>
+        </lightning-layout-item>
+        <lightning-layout-item class="slds-align-bottom slds-p-around_xx-small">
+            <lightning-button variant="brand"
+                              label="New Record"
+                              title="New Record"
+                              onclick={createNewRecord}>
+            </lightning-button>
+        </lightning-layout-item>
+        <lightning-layout-item size="1" class="slds-align-bottom slds-p-around_xx-small">
+            <lightning-combobox name="itemsPerPage" label="Page Length" placeholder={pageSizeLabel} value={pageSize} options={pageSizeOptions} onchange={updateNumberOfItemsPerPage}></lightning-combobox>
+        </lightning-layout-item>
+    </lightning-layout>
+
+    <lightning-datatable
+                key-field="Id"
+                data={allDataTableRows}
+                columns={dataTableColumns}
+                selected-rows={selectedTableRows}
+                onupdateitemgrid={getTableData}
+                onrowselection={addRowToSelectedDataTableRowMap}
+                onrowaction={doSelectedRowAction}
+                sorted-by={rowSelectedForSorting}
+                sorted-direction={sortDirection}
+                onsort={sortRowData}
+                onsave={saveTableDataToServer}>
+        </lightning-datatable>
+
+        <lightning-layout >
+            <lightning-layout-item size="6" class="slds-align_absolute-center slds-p-top_small">
+                <lightning-button-group>
+                    <lightning-button variant="neutral" label="First" onclick={changeDataTablePage}></lightning-button>
+                    <lightning-button variant="neutral" label="Previous" onclick={changeDataTablePage}></lightning-button>
+                    <div class="slds-m-horizontal_medium slds-align_absolute-center">
+                        {currentPageNumber} of {maxPageNumber}
+                    </div>
+                    <lightning-button variant="neutral" label="Next" onclick={changeDataTablePage}></lightning-button>
+                    <lightning-button variant="neutral" label="Last" onclick={changeDataTablePage}></lightning-button>
+                </lightning-button-group>
+            </lightning-layout-item>
+        </lightning-layout>
+</template>

@@ -15,7 +15,10 @@ jobs:
       - save_cache:
           key: dependency-cache-{{ checksum "package.json" }}
           paths:
-            - node_modules 
+            - node_modules
+      - run: 
+          name: Login to Org
+          command: . build/login_to_org.sh 
       - run:
           name: Run Apex Tests
           command: . build/run_apex_tests.sh

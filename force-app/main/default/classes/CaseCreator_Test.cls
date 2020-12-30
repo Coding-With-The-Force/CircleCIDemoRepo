@@ -4,6 +4,6 @@ public with sharing class CaseCreator_Test {
     CaseCreator.createCase();
     List<Case> caseList = [SELECT Id FROM Case];
     System.assertEquals(2, caseList.size());
-    //Hi this is Matt
+    //Hi this is Matt 
   }
 }

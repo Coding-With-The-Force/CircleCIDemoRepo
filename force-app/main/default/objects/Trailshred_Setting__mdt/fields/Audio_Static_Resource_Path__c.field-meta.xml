@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Audio_Static_Resource_Path__c</fullName>
+    <deprecated>false</deprecated>
+    <description>If the static resource is the audio file, enter just the resource&apos;s name (e.g. gong). If the static resource is a zip file, enter the resource&apos;s name and path within it to the audio file, including extension (e.g. sounds/sales/gong.mp3).</description>
+    <externalId>false</externalId>
+    <fieldManageability>SubscriberControlled</fieldManageability>
+    <inlineHelpText>If the static resource is the audio file, enter just the resource&apos;s name (e.g. gong). If the static resource is a zip file, enter the resource&apos;s name and path within it to the audio file, including extension (e.g. sounds/sales/gong.mp3).</inlineHelpText>
+    <label>Audio Static Resource Path</label>
+    <length>255</length>
+    <required>true</required>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

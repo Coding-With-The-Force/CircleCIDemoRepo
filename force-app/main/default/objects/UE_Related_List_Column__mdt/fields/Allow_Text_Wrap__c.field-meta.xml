@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Allow_Text_Wrap__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Allow the text for the column to be wrapped in the datatable</description>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <inlineHelpText>Allow the text for the column to be wrapped in the datatable</inlineHelpText>
+    <label>Allow Text Wrap</label>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Allow_Editing__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Allows the row to be edited in the data table</description>
+    <externalId>false</externalId>
+    <fieldManageability>SubscriberControlled</fieldManageability>
+    <inlineHelpText>Allows the row to be edited in the data table</inlineHelpText>
+    <label>Allow Editing?</label>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Allow_Sorting__c</fullName>
+    <defaultValue>true</defaultValue>
+    <description>Allows user to determine whether or not the field can be sorted on the data table</description>
+    <externalId>false</externalId>
+    <fieldManageability>SubscriberControlled</fieldManageability>
+    <inlineHelpText>Allows user to determine whether or not the field can be sorted on the data table</inlineHelpText>
+    <label>Allow Sorting?</label>
+    <type>Checkbox</type>
+</CustomField>

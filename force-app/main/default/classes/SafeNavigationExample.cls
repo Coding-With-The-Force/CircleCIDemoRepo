@@ -1,6 +1,6 @@
 public with sharing class SafeNavigationExample {
 
-    public static void noSafeNav(){
+    /*public static void noSafeNav(){
         String kevinsName = [SELECT Id, Name, BillingStreet FROM Account WHERE Name = 'Kevin' LIMIT 1].Name;
         System.debug('Couldn\'t even get here cause I died');
     }
@@ -26,5 +26,5 @@ public with sharing class SafeNavigationExample {
         for(Account acct: acctList){
             String matchedAccountName = acctMap.get(acct.Id).Name;
         }
-    }
+    }*/
 }

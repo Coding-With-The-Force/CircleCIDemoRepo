@@ -1,5 +1,5 @@
 public with sharing class Org_Ultra_Related_List_Controller {
-    private static Org_DataTable_Column_Wrapper actionsColumn = new Org_DataTable_Column_Wrapper();
+    /*private static Org_DataTable_Column_Wrapper actionsColumn = new Org_DataTable_Column_Wrapper();
 
     @AuraEnabled
     public static List<SObject> getTableDataController(Id recordId, String relatedObjectField, String objectType){
@@ -229,5 +229,5 @@ public with sharing class Org_Ultra_Related_List_Controller {
         sObjectQuery = sObjectQuery.removeEnd(',');
         sObjectQuery += ' FROM ' + objectType + ' WHERE ' + relatedObjectField + ' = :recordId';
         return sObjectQuery;
-    }
+    }*/
 }

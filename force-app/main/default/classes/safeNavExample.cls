@@ -1,6 +1,6 @@
 public with sharing class safeNavExample {
 
-    public static void noSafeNav(){
+    /*public static void noSafeNav(){
         List<Account> acctList = [SELECT Id, Name FROM Account WHERE Name = 'Kevin' LIMIT 1];
         if(!acctList.isEmpty()){
             String acctName = acctList[0].Name;
@@ -35,5 +35,5 @@ public with sharing class safeNavExample {
             }
             
         }
-    }
+    }*/
 }

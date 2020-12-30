@@ -6,11 +6,11 @@ public class GoogleMapsCallout {
     
     public static void callGoogleMaps()
     {
-    	HttpRequest req = new HttpRequest();
+    	/*HttpRequest req = new HttpRequest();
         req.setEndpoint('callout:Google_Maps_Geocode' + GEOCODE_PATH + ADDRESS_VARIABLE + KEY_VARIABLE);
         req.setMethod('GET');
         Http http = new Http();
         HTTPResponse res = http.send(req);
-        System.debug(res.getBody());
+        System.debug(res.getBody());*/
     }
 }

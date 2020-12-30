@@ -1,16 +1,16 @@
 public with sharing class Org_Ultra_Related_List_Controller {
-    /*private static Org_DataTable_Column_Wrapper actionsColumn = new Org_DataTable_Column_Wrapper();
+    private static Org_DataTable_Column_Wrapper actionsColumn = new Org_DataTable_Column_Wrapper();
 
     @AuraEnabled
     public static List<SObject> getTableDataController(Id recordId, String relatedObjectField, String objectType){
         List<SObject> tableData = new List<SObject>();
-        try {
+        /*try {
             String query = buildObjectQuery(objectType, relatedObjectField);
             System.debug('This was the query ::: ' + query);
             tableData = database.query(query);
         } catch (Exception e) {
             throw new AuraHandledException(e.getMessage());
-        }
+        }*/
 
         return tableData;
     }
@@ -18,25 +18,26 @@ public with sharing class Org_Ultra_Related_List_Controller {
     @AuraEnabled
     public static List<UE_Related_List_Page_Size__mdt> getTableSizeOptionsController(){
         List<UE_Related_List_Page_Size__mdt> columnSizeOptions = new List<UE_Related_List_Page_Size__mdt>();
-        columnSizeOptions = [SELECT Id, Label, Page_Size__c FROM UE_Related_List_Page_Size__mdt ORDER BY Page_Size__c LIMIT 1000];
+        //columnSizeOptions = [SELECT Id, Label, Page_Size__c FROM UE_Related_List_Page_Size__mdt ORDER BY Page_Size__c LIMIT 1000];
         return columnSizeOptions;
     }
     
     @AuraEnabled
     public static List<Org_DataTable_Column_Wrapper> getDataTableColumnsController(String objectType){
         List<Org_DataTable_Column_Wrapper> columnData = new List<Org_DataTable_Column_Wrapper>();
-        List<UE_Related_List_Column__mdt> columnMetadata = getRelatedListColumnMetadata(objectType);
+        /*List<UE_Related_List_Column__mdt> columnMetadata = getRelatedListColumnMetadata(objectType);
         
         if(!columnMetadata.isEmpty()){
             columnData = buildColumnData(columnMetadata);
-        }
+        }*/
 
         return columnData;
     }
 
     @AuraEnabled
     public static String saveTableDataToServer(String objectType, String tableDataJSON){
-        List<Object> objectsReceived = (List<Object>)JSON.deserializeUntyped(tableDataJSON);
+        String returnMsg = 'The update failed';
+        /*List<Object> objectsReceived = (List<Object>)JSON.deserializeUntyped(tableDataJSON);
         List<SObject> convertedSObjects = new List<SObject>();
 
         for(Object val: objectsReceived){
@@ -77,7 +78,7 @@ public with sharing class Org_Ultra_Related_List_Controller {
             convertedSObjects.add(convertedObject);
         }
         
-        String returnMsg = 'The update failed';
+        
         try{
             database.update(convertedSObjects, true);
             returnMsg = 'Successfully updated all records';
@@ -86,11 +87,11 @@ public with sharing class Org_Ultra_Related_List_Controller {
             returnMsg = 'There was an error updating the records: ' + err.getMessage();
         }
 
-        System.debug('This is the return message ::: ' + returnMsg);
+        System.debug('This is the return message ::: ' + returnMsg);*/
         return returnMsg;
     }
 
-    private static List<UE_Related_List_Column__mdt> getRelatedListColumnMetadata(String objectType){
+    /*private static List<UE_Related_List_Column__mdt> getRelatedListColumnMetadata(String objectType){
         List<UE_Related_List_Column__mdt> dataColumns = new List<UE_Related_List_Column__mdt>();
         dataColumns = [SELECT Id, Label, Column_Order__c, Allow_Editing__c, Allow_Sorting__c, URL_Id__c, 
                        Allow_Text_Wrap__c, Column_Type__c, Field_Name__c, Initial_Column_Width__c, Object_Developer_Name__c
